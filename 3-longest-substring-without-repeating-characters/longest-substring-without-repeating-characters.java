@@ -13,7 +13,7 @@ class Solution {
                 left++;
             }
             seen.add(s.charAt(right));
-            maxLength = Math.max(maxLength,right-left+1);
+            maxLength = Math.max(maxLength,seen.size());
         }   
         return maxLength;
     }
