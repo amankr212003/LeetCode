@@ -1,0 +1,19 @@
+class Solution {
+    public int digitSum(int n){
+       int sum=0;
+       int rem=0;
+       while(n>0){
+            rem=n%10;
+            sum=sum+rem;
+            n=n/10;
+       }
+       return sum;
+    }
+    public int smallestIndex(int[] nums) {
+        for(int i=0;i<nums.length;i++){
+            if(digitSum(nums[i])==i)
+                return i;
+        }
+        return -1;
+    }
+}
